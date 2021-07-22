@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .mySlides {
+      position: absolute;
+      height: 100%;
+      display: none;
+    }
+
+    .h1-jam {
+      font-size: 5rem;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .video-background {
+
+      background: #aa4b6b;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -99;
+    }
+
+    .video-foreground,
+    .video-background iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    #vidtop-content {
+      top: 0;
+      color: #fff;
+    }
+
+    #vidbottom-content {
+      bottom: 0;
+      color: #fff;
+    }
+
+    .vid-info {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      font-family: Helvetica, sans-serif;
+    }
+
+    .vidbottom-info {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-family: Helvetica, sans-serif;
+    }
+
+    .vid-info h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 0;
+      line-height: 1.2;
+    }
+
+    .vid-info a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      background: rgba(0, 0, 0, 0.5);
+      transition: .6s background;
+      border-bottom: none;
+      margin: 1rem auto;
+      text-align: center;
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+      .video-foreground {
+        height: 300%;
+        top: -100%;
+      }
+    }
+
+    @media (max-aspect-ratio: 16/9) {
+      .video-foreground {
+        width: 300%;
+        left: -100%;
+      }
+    }
+
+    @media all and (max-width: 600px) {
+      .vid-info {
+        width: 50%;
+        padding: .5rem;
+      }
+
+      .vid-info h1 {
+        margin-bottom: .2rem;
+      }
+    }
+
+    @media all and (max-width: 500px) {
+      .vid-info .acronym {
+        display: none;
+      }
+    }
+
+    .min100 {
+      min-height: 100px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .bg-jadwal {
+      background-color: #007bff;
+    }
+
+    .jadwalaktif:nth-of-type(1) {
+      background: red !important;
+    }
+
+    .image1 {
+      background: url('image/1.jpg') center center no-repeat;
+      background-size: cover;
+    }
+
+    .image2 {
+      background: url('image/2.jpg') center center no-repeat;
+      background-size: cover;
+    }
+
+    .image3 {
+      background: url('image/3.jpg') center center no-repeat;
+      background-size: cover;
+    }
+
+    .col-100vh {
+      height: 100vh;
+      width: 100vw;
+    }
+  </style>
+  <title>Jam Masjid Murah</title>
+
+</head>
+
+<body class="h-100 w-100 bg-gradien">
+  <div class="w3-content w3-section" style="max-width:500px">
+    <img class="mySlides" src="image/1.jpg" style="width:100%">
+    <img class="mySlides" src="image/2.jpg" style="width:100%">
+    <img class="mySlides" src="image/3.jpg" style="width:100%">
+    <img class="mySlides" src="image/4.jpg" style="width:100%">
+    <img class="mySlides" src="image/5.jpg" style="width:100%">
+    <img class="mySlides" src="image/6.jpg" style="width:100%">
+    <img class="mySlides" src="image/7.jpg" style="width:100%">
+    <img class="mySlides" src="image/8.jpg" style="width:100%">
+    <img class="mySlides" src="image/9.jpg" style="width:100%">
+  </div>
+  <div class="video-background">
+
+    <div id="carouselExampleSlidesImage" class="carousel slide w-100" data-ride="carouselimage" data-interval="5000">
+      <div class="carousel-inner">
+        <div class="carousel-item active text-center">
+          <div class="image1 col-100vh"></div>
+        </div>
+        <div class="carousel-item text-center">
+          <div class="image2 col-100vh"></div>
+        </div>
+        <div class="carousel-item text-center">
+          <div class="image3 col-100vh"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="vidtop-content">
+    <div class="vid-info p-2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3 text-center">
+            <div class="container-fluid border-bottom border-white p-0"><span id="tgl-masehi" class="h3"></span></div>
+            <div class="container-fluid p-0"><span id="tgl-hijri" class="h3"></span></div>
+          </div>
+          <div class="col-md-6 text-center">
+            <span class="h1">Masjid Al-Muhajirin</span><br>
+            <span class="h4">Komplek Yayasan Pesantren IT SMP-SMK IDN Boarding School, Kecamatan Jonggol, Kabupaten
+              Bogor</span>
+          </div>
+          <div class="col-md-3 text-center">
+            <span id="date_time" class="h1-jam"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="vidbottom-content">
+
+    <div class="vidbottom-info pt-2">
+      <div class="container-fluid">
+        <div class="row">
+          <p id="demo"></p>
+        </div>
+        <div class="row align-middle">
+          <div class="col text-center bg-jadwal min100 m-1">
+            <div class="container border-bottom border-white"><span class="h1">Imsak</span></div>
+            <span class="h1 font-weight-bold mb-0" id="waktuimsya">Loading</span>
+          </div>
+          <div class="col text-center bg-jadwal min100 m-1">
+            <div class="container border-bottom border-white"><span class="h1">Subuh</span></div>
+            <span class="h1 font-weight-bold mb-0" id="waktusubuh">Loading</span>
+          </div>
+          <div class="col text-center bg-jadwal min100 m-1">
+            <div class="container border-bottom border-white"><span class="h1">Dzuhur</span></div>
+            <span class="h1 font-weight-bold mb-0" id="waktudzuhur">Loading</span>
+          </div>
+          <div class="col text-center bg-jadwal min100 m-1">
+            <div class="container border-bottom border-white"><span class="h1">Ashar</span></div>
+            <span class="h1 font-weight-bold mb-0" id="waktuashar">Loading</span>
+          </div>
+          <div class="col text-center bg-jadwal min100 m-1">
+            <div class="container border-bottom border-white"><span class="h1">Magrib</span></div>
+            <span class="h1 font-weight-bold mb-0" id="waktumagrib">Loading</span>
+          </div>
+          <div class="col text-center bg-jadwal min100 m-1">
+            <div class="container border-bottom border-white"><span class="h1">Isya</span></div>
+            <span class="h1 font-weight-bold mb-0" id="waktuisya">Loading</span>
+          </div>
+        </div>
+        <div class="row mt-2 p-2 bg-info">
+          <div id="carouselExampleSlidesOnly" class="carousel slide w-100" data-ride="carousel" data-interval="7000">
+            <div class="carousel-inner">
+              <div class="carousel-item active text-center">
+                <span class="h3">Selamat Datang di Masjid Al-Muhajirin (IDN Boarding School)</span>
+              </div>
+              <div class="carousel-item text-center">
+                <span class="h3">Luruskan Dan Rapatkan Shaf</span>
+              </div>
+              <div class="carousel-item text-center">
+                <span class="h3">Wahai Bilal, berdirilah. Nyamankan lah kami dengan mendirikan shalat. (HR.Abu
+                  Dawud)</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModalCenter">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h1 class="modal-title h1 w-100" id="exampleModalLongTitle">IQOMAH <span id="cooldowniqomah">-</span></h1>
+        </div>
+        <div class="modal-body text-center">
+          <ul class="list-group list-group-flush h3">
+            <li class="list-group-item h2 active">Luruskan dan Rapatkan Shaf Sholat</li>
+            <li class="list-group-item">سَوُّوا صُفُوفَكُمْ فَإِنَّ تَسْوِيَةَ الصَّفِّ مِنْ تَمَامِ الصَّلَاةِ</li>
+            <li class="list-group-item">Luruskanlah shaf-shaf kalian, karena sesungguhnya lurusnya shaf termasuk
+              kesempurnaan shalat. <br>[HR Muslim].</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <script type="text/javascript">
+    var myIndex = 0;
+    var fixd;
+    var weekday = new Array("Ahad", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu");
+    var monthname = new Array("Januari", "Februari", "Maret", "April", "Mei", " Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 10000);
+    }
+
+    function getJadwalData() {
+    var myHeaders = new Headers();
+    myHeaders.append('pragma', 'no-cache');
+    myHeaders.append('cache-control', 'no-cache');
+    var myInit = {
+      method: 'GET',
+      headers: myHeaders,
+    };
+    var myRequest = new Request('jadwal/');
+    fetch(myRequest, myHeaders)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("waktuimsya").innerHTML = data.jadwal.Imsak;
+        document.getElementById("waktusubuh").innerHTML = data.jadwal.Subuh;
+        document.getElementById("waktudzuhur").innerHTML = data.jadwal.Duhur;
+        document.getElementById("waktuashar").innerHTML = data.jadwal.Ashar;
+        document.getElementById("waktumagrib").innerHTML = data.jadwal.Maghrib;
+        document.getElementById("waktuisya").innerHTML = data.jadwal.Isya;
+      });
+    }
+
+    function isGregLeapYear(year) {
+      return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+    }
+    function gregToFixed(year, month, day) {
+      var a = Math.floor((year - 1) / 4);
+      var b = Math.floor((year - 1) / 100);
+      var c = Math.floor((year - 1) / 400);
+      var d = Math.floor((367 * month - 362) / 12);
+      if (month <= 2)
+        e = 0;
+      else if (month > 2 && isGregLeapYear(year))
+        e = -1;
+      else
+        e = -1;
+      return 1 - 1 + 365 * (year - 1) + a - b + c + d + e + day;
+    }
+    function Hijri(year, month, day) {
+      this.year = year;
+      this.month = month;
+      this.day = day;
+      this.toFixed = hijriToFixed;
+      this.toString = hijriToString;
+    }
+    function hijriToFixed() {
+      return this.day + Math.ceil(29.5 * (this.month - 1)) + (this.year - 1) * 354 + Math.floor((3 + 11 * this.year) / 30) + 227015 - 1;
+    }
+    function hijriToString() {
+      var months = new Array("Muharram", "Safar", "Rabiul Awal", "Rabiul Tsani", "Jumadil Ula", "Jumadil Tsani", "Rajab", "Sya\'ban", "Ramadhan", "Syawwal", "Dzul Qa\'dah", "Dzul Hijjah");
+      return this.day + " " + months[this.month - 1] + " " + this.year;
+    }
+    function fixedToHijri(f) {
+      var i = new Hijri(1100, 1, 1);
+      i.year = Math.floor((30 * (f - 227015) + 10646) / 10631);
+      var i2 = new Hijri(i.year, 1, 1);
+      var m = Math.ceil((f - 29 - i2.toFixed()) / 29.5) + 1;
+      i.month = Math.min(m, 12);
+      i2.year = i.year;
+      i2.month = i.month;
+      i2.day = 1;
+      i.day = f - i2.toFixed() + 1;
+      return i;
+    }
+
+    function setTanggal() {
+      var tod = new Date();
+      var y = tod.getFullYear();
+      var m = tod.getMonth();
+      var d = tod.getDate();
+      var dow = tod.getDay();
+      document.getElementById("tgl-masehi").innerHTML = `<span class="h1">` + weekday[dow] + `</span>`;
+      document.getElementById("tgl-masehi").innerHTML += `<br><span class="h3">` + d + ` ` + monthname[m] + ` ` + y + `</span>`;
+
+      m++;
+      fixd = gregToFixed(y, m, d);
+      var h = new Hijri(1421, 11, 28);
+      h = fixedToHijri(fixd);
+      document.getElementById("tgl-hijri").innerHTML = `<span class="h3">` + h.toString() + ` H.</span>`;
+    }
+
+    function date_time(id) {
+      date = new Date();
+      h = date.getHours();
+      if (h < 10) {
+        h = "0" + h;
+      }
+      m = date.getMinutes();
+      if (m < 10) {
+        m = "0" + m;
+      }
+      s = date.getSeconds();
+      if (s < 10) {
+        s = "0" + s;
+      }
+      result = '' + h + ':' + m + ':' + s;
+      if(result == '00:00:00') {
+        setTanggal();
+        getJadwalData();
+      }
+      document.getElementById(id).innerHTML = result;
+      setTimeout('date_time("' + id + '");', '1000');
+      return true;
+    }
+    window.onload = function () {
+      date_time('date_time');
+      var elements = document.getElementsByClassName('txt-rotate');
+      for (var i = 0; i < elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-rotate');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtRotate(elements[i], JSON.parse(toRotate), period);
+        }
+      }
+      // INJECT CSS
+      var css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+      document.body.appendChild(css);
+    };
+  </script>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.2.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    setTanggal();
+    getJadwalData();
+    carousel();
+    $('.carousel').carousel();
+    $('carouselimage').carousel();
+  </script>
+
+
+</body>
+
+</html>
